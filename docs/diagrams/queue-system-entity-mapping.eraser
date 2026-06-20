@@ -1,0 +1,118 @@
+colorMode outline
+styleMode plain
+typeface clean
+notation crows-feet
+
+organization [icon: home, color: #7DD3FC] {
+  id long pk
+  name string
+  code string unique
+  contactEmail string
+  description string
+}
+
+branch [icon: grid, color: #93C5FD] {
+  id long pk
+  org_id long
+  name string
+  location string
+  timezone string
+  supportEmail string
+  contactNumber string
+}
+
+department [icon: list, color: #86EFAC] {
+  id long pk
+  branch_id long
+  name string
+}
+
+serviceQueue [icon: list, color: #FDE68A] {
+  id long pk
+  branch_id long
+  department_id long nullable
+  name string
+  prefix string
+  serviceCode string
+  description string
+  averageServiceTimeMinutes int
+  isActive boolean
+  currentServingToken int
+  lastGeneratedToken int
+  currentTokenSequence int
+}
+
+counter [icon: grid, color: #C4B5FD] {
+  id long pk
+  branch_id long
+  department_id long nullable
+  current_agent_id long nullable
+  name string
+  code string
+  isOnline boolean
+}
+
+appUser [icon: user, color: #F9A8D4] {
+  id long pk
+  org_id long nullable
+  branch_id long nullable
+  username string
+  password string
+  fullName string
+  email string
+  phone string
+  emailNotificationsEnabled boolean
+  role enum(Role)
+}
+
+token [icon: clock, color: #FDBA74] {
+  id long pk
+  service_queue_id long
+  counter_id long nullable
+  agent_id long nullable
+  tokenIdentifier string
+  sequenceNumber int
+  type enum(TokenType)
+  status enum(TokenStatus)
+  customerName string
+  customerPhone string
+  customerEmail string
+  notes string
+  issuedAt datetime
+  calledAt datetime
+  servedAt datetime
+  notifiedAt datetime
+}
+
+country [icon: home, color: #67E8F9] {
+  id long pk
+  name string unique
+  isoCode string unique
+}
+
+state [icon: grid, color: #A5F3FC] {
+  id long pk
+  country_id long
+  name string
+}
+
+city [icon: grid, color: #CFFAFE] {
+  id long pk
+  state_id long
+  name string
+}
+
+branch.org_id > organization.id
+department.branch_id > branch.id
+serviceQueue.branch_id > branch.id
+serviceQueue.department_id > department.id
+counter.branch_id > branch.id
+counter.department_id > department.id
+counter.current_agent_id - appUser.id
+appUser.org_id > organization.id
+appUser.branch_id > branch.id
+token.service_queue_id > serviceQueue.id
+token.counter_id > counter.id
+token.agent_id > appUser.id
+state.country_id > country.id
+city.state_id > state.id

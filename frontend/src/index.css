@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-stone-950 text-white antialiased;
+    font-family: "Segoe UI", "Inter", system-ui, sans-serif;
+  }
+
+  select,
+  option,
+  optgroup {
+    color: #f8fafc;
+    background-color: #17203b;
+  }
+
+  select:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.9);
+    border-color: rgba(56, 189, 248, 0.9);
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+
+  * {
+    @apply border-stone-800;
+  }
+}
