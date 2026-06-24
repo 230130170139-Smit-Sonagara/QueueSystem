@@ -44,7 +44,7 @@ Smart Queue System solves this by:
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 ### Backend
 - Java 17
@@ -57,7 +57,7 @@ Smart Queue System solves this by:
 
 ---
 
-## 🏗 System Architecture
+##  System Architecture
 
 Client Layer
 React + Vite running at http://localhost:5173
