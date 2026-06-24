@@ -1,11 +1,11 @@
-# 🎫 Smart Queue System
+# Smart Queue System
 ### Full-Stack Web Application | Token & Queue Management Platform
 
 > A production-ready queue management system built for hospitals, banks, clinics, and government offices — featuring real-time token tracking, role-based access, email notifications, and a live TV display board.
 
 ---
 
-## 📌 Project Summary
+##  Project Summary
 
 Smart Queue System is a full-stack enterprise web application that digitizes the physical queue experience. Instead of standing in line, customers book tokens online, track their position in real time, and receive email alerts when their turn arrives.
 
@@ -15,7 +15,7 @@ This project demonstrates end-to-end software engineering including system desig
 
 ---
 
-## 🎯 Problem Statement
+##  Problem Statement
 
 In hospitals, banks, and government offices, customers waste hours standing in physical queues with no visibility into their waiting time. Staff have no digital tools to manage service flow efficiently.
 
@@ -27,24 +27,24 @@ Smart Queue System solves this by:
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
-- 🎟️ Online Token Booking — Customers book tokens from any device without visiting the location
-- 📲 Live Token Tracking — Real-time status page showing position, people ahead, and estimated wait
-- 📺 TV Queue Display — Waiting area screen showing now-serving and upcoming tokens
-- 🧑‍💼 Agent Workspace — Counter staff manage their queue — call next, complete, or no-show
-- 📊 Admin Dashboard — Full network overview with live metrics, branch status, and serving snapshot
-- 📧 Email Notifications — Automated booking confirmation and turn-called alerts via Gmail SMTP
-- 🔐 JWT Authentication — Stateless token-based security with role-based access control
-- 🏢 Multi-Branch Architecture — Multiple branches under one organization, each with independent queues
-- ⭐ VIP Priority Routing — Intelligent serving order: VIP → Online Appointment → Walk-in
-- 📱 QR Code Tracking — Each token generates a QR code linking to its live tracking page
-- 🚀 Auto Data Seeding — System boots with complete demo data on first run
-- 🔄 Real-Time Polling — Frontend auto-refreshes every 4 seconds for live queue updates
+-  Online Token Booking — Customers book tokens from any device without visiting the location
+-  Live Token Tracking — Real-time status page showing position, people ahead, and estimated wait
+-  TV Queue Display — Waiting area screen showing now-serving and upcoming tokens
+-  Agent Workspace — Counter staff manage their queue — call next, complete, or no-show
+-  Admin Dashboard — Full network overview with live metrics, branch status, and serving snapshot
+-  Email Notifications — Automated booking confirmation and turn-called alerts via Gmail SMTP
+-  JWT Authentication — Stateless token-based security with role-based access control
+-  Multi-Branch Architecture — Multiple branches under one organization, each with independent queues
+-  VIP Priority Routing — Intelligent serving order: VIP → Online Appointment → Walk-in
+-  QR Code Tracking — Each token generates a QR code linking to its live tracking page
+-  Auto Data Seeding — System boots with complete demo data on first run
+-  Real-Time Polling — Frontend auto-refreshes every 4 seconds for live queue updates
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
 ### Backend
 - Java 17
@@ -55,20 +55,9 @@ Smart Queue System solves this by:
 - Java Mail Sender (Gmail SMTP)
 - Maven
 
-### Frontend
-- React 19
-- Vite 8
-- React Router v7
-- Axios 1.7
-- Tailwind CSS 3.4
-- Lucide React (icons)
-- Recharts (admin charts)
-- Framer Motion (animations)
-- qrcode.react (QR generation)
-
 ---
 
-## 🏗️ System Architecture
+## 🏗 System Architecture
 
 Client Layer
 React + Vite running at http://localhost:5173
@@ -93,7 +82,7 @@ Gmail SMTP for email notifications
 
 ---
 
-## 🗄️ Database Design
+##  Database Design
 
 ### Entity Relationship
 
@@ -118,7 +107,7 @@ Organization
 
 ---
 
-## 🔄 Token Lifecycle
+##  Token Lifecycle
 
 Customer books token
 |
@@ -142,7 +131,7 @@ Business Rules:
 
 ---
 
-## 🔐 Authentication and Security
+##  Authentication and Security
 
 - JWT-based stateless authentication — no server-side sessions
 - BCrypt password hashing — passwords never stored in plain text
@@ -158,7 +147,7 @@ Business Rules:
 
 ---
 
-## 📡 REST API Endpoints
+##  REST API Endpoints
 
 ### Public — /api/public
 GET    /branches
@@ -182,7 +171,7 @@ GET    /setup
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 QueueSystem/
 ├── backend/
@@ -215,7 +204,7 @@ QueueSystem/
 
 ---
 
-## ⚙️ Getting Started
+## ️ Getting Started
 
 ### Prerequisites
 - Java 17 or above
@@ -254,7 +243,7 @@ port: 8080
 
 ---
 
-## 🔑 Default Login Credentials
+##  Default Login Credentials
 
 ### Admin
 - Username: admin
@@ -271,7 +260,7 @@ port: 8080
 
 ---
 
-## 🧪 Demo Walkthrough
+##  Demo Walkthrough
 
 ### Customer Flow
 1. Open /kiosk
@@ -295,7 +284,7 @@ port: 8080
 
 ---
 
-## 📊 Skills Demonstrated
+##  Skills Demonstrated
 
 - System Design — Multi-branch multi-role enterprise architecture
 - REST API Design — Clean separation of public, auth, agent, and admin routes
@@ -309,7 +298,7 @@ port: 8080
 
 ---
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
 - WebSocket integration for true real-time updates instead of polling
 - SMS notifications via Twilio
